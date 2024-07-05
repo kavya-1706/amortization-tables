@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EMI Calculator</h1>
+        <div class="form-group">
+            <label for="annualRate">Annual Interest Rate (%):</label>
+            <input type="number" id="annualRate" placeholder="Enter annual interest rate">
+        </div>
+        <div class="form-group">
+            <label for="numPeriods">Number of Periods (Months):</label>
+            <input type="number" id="numPeriods" placeholder="Enter number of periods in months">
+        </div>
+        <div class="form-group">
+            <label for="presentValue">Present Value (Loan Amount):</label>
+            <input type="number" id="presentValue" placeholder="Enter present value">
+        </div>
+        <div class="form-group">
+            <label for="paymentType">Payment Type:</label>
+            <select id="paymentType">
+                <option value="Monthly">Monthly</option>
+                <option value="Quarterly">Quarterly</option>
+                <option value="HalfYearly">Half Yearly</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tableType">Table Type:</label>
+            <select id="tableType">
+                <option value="EMI">EMI</option>
+                <option value="Bullet">Bullet Payment</option>
+                <option value="EqualPrincipal">Equal Principal</option>
+            </select>
+            <br><br>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        
+        <br>
+        <div id="result" class="result" style="display: none;"></div>
+        <br>
+        <table id="emiTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Beginning Loan Balance</th>
+                    <th>Payment</th>
+                    <th>Interest</th>
+                    <th>Principal</th>
+                    <th>Ending Loan Balance</th>
+                    <th>Cash Flow</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
